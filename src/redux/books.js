@@ -3,8 +3,24 @@ const REMOVE_BOOK = 'react-bookstore/books/REMOVE_BOOK';
 
 const initialState = {
   books: [
-    { id: 1, title: 'Harry Potter', author: 'JK. Rowlings' },
-    { id: 2, title: 'Bad Boys', author: 'Will Smith' },
+    {
+      id: 1,
+      title: 'The Hunger Games',
+      author: 'Suzanne Collins',
+      category: 'Action',
+    },
+    {
+      id: 2,
+      title: 'Dune',
+      author: 'Frank Herbert',
+      category: 'Science Fiction',
+    },
+    {
+      id: 3,
+      title: 'Capital in the Twenty-First Century',
+      author: 'Suzanne Collins',
+      category: 'Economy',
+    },
   ],
 };
 
@@ -20,7 +36,8 @@ export default function booksReducer(state = initialState, action) {
         ...state,
         books: state.books.filter((book) => book.id !== action.payload),
       };
-    default: return state;
+    default:
+      return state;
   }
 }
 
