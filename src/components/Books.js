@@ -1,46 +1,19 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import AddBook from './AddBook';
 
-const BooksPage = () => {
-  const books = [
-    {
-      id: 1,
-      title: 'The Hunger Games',
-      author: 'Suzanne Collins',
-      category: 'Action',
-    },
-    {
-      id: 2,
-      title: 'Dune',
-      author: 'Frank Herbert',
-      category: 'Science Fiction',
-    },
-    {
-      id: 3,
-      title: 'Capital in the Twenty-First Century',
-      author: 'Suzanne Collins',
-      category: 'Economy',
-    },
-  ];
+const Books = () => {
+  const books = useSelector((state) => state.books.books);
 
   return (
     <div>
       <ul className="books">
-        {books.map((book) => (
-          <Book
-            key={book.id}
-            title={book.title}
-            author={book.author}
-            category={book.category}
-          />
-        ))}
+        { books.length > 0 ? books.map((book) => (<Book key={book.id} book={book} />)) : ''}
       </ul>
-      <div>
-        <AddBook />
-      </div>
+      <AddBook />
     </div>
   );
 };
 
-export default BooksPage;
+export default Books;
