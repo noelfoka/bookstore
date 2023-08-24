@@ -1,8 +1,8 @@
 import ConnectBook from '../connectApi/connect';
 
-const ADD_BOOK = 'react-bookstore/books/ADD_BOOK';
-const REMOVE_BOOK = 'react-bookstore/books/REMOVE_BOOK';
-const GET_BOOKS = 'react-bookstore/books/GET_BOOKS';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+const GET_BOOKS = 'bookstore/books/GET_BOOKS';
 
 const initialState = {
   books: [],
