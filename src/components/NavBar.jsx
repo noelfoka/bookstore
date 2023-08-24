@@ -1,19 +1,28 @@
+import React from 'react';
+
 import {
   Link,
 } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import './NavBar.css';
 
 const Navbar = () => (
-  <nav className="navbar-container">
-    <h1>Bookstore</h1>
+  <nav className="nav-bar">
+    <div className="nav-brand">
+      <Link to="/bookstore-cms/"><h1>Bookstore CMS</h1></Link>
+    </div>
     <ul className="nav-links">
       <li>
-        <Link to="/">Home</Link>
+        <Link className="nav-link" to="/bookstore-cms/">BOOKS</Link>
       </li>
       <li>
-        <Link to="/categories">categories</Link>
+        <Link className="nav-link" to="/bookstore-cms/categories">CATEGORIES</Link>
       </li>
-
     </ul>
+    <button type="button" className="login-btn">
+      <FontAwesomeIcon icon={faCircleUser} />
+    </button>
   </nav>
 );
 
