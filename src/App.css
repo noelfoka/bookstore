@@ -1,3 +1,39 @@
-.App {
-  text-align: center;
+body {
+  padding: 0;
+  margin-left: 100px;
+  background-color: aliceblue;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  background-color: whitesmoke;
+  font-size: 20px;
+}
+
+.navbar a {
+  list-style: none;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  margin-top: 10px;
+}
+
+.book li {
+  list-style: none;
+}
+
+form {
+  margin-top: 100px;
 }
